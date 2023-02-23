@@ -10,12 +10,14 @@ public class Main {
                 .build();
         Person son = mom.newChildBuilder()
                 .setName("Антошка")
+                .setAge(0)
                 .build();
         System.out.println("У " + mom + " есть сын, " + son);
 
         try {
             // Не хватает обязательных полей
             new PersonBuilder().build();
+
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
